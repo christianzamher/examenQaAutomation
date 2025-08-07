@@ -2,6 +2,8 @@
 
 Este proyecto es un ejercicio de automatización de pruebas para una aplicación web simple de gestión de tareas. El objetivo es validar la funcionalidad de la aplicación utilizando un framework de automatización construido con **Selenium**, **Java** y **Cucumber**.
 
+![](images/gestor.png)
+
 ---
 
 ## 🚀 Tecnologías y Herramientas
