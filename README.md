@@ -4,6 +4,10 @@ Este proyecto es un ejercicio de automatización de pruebas para una aplicación
 
 ![](images/gestor.png)
 
+
+### Reportes y Documentación
+
+Puedes descargar el [Reporte de Pruebas](https://github.com/christianzamher/examenQaAutomation/raw/main/images/Reporte%20Gestor%20de%20Tareas%20-%20Christian%20.docx) para más detalles sobre el proyecto.
 ---
 
 ## 🚀 Tecnologías y Herramientas
