@@ -4,6 +4,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
 import io.cucumber.datatable.DataTable;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +20,7 @@ import java.util.Map;
 import static org.junit.Assert.assertTrue;
 
 public class TareasSteps {
+    private static final Logger log = LogManager.getLogger(TareasSteps.class);
     private final WebDriver driver;
 
     public TareasSteps() {
@@ -33,6 +36,7 @@ public class TareasSteps {
     @When("El usuario completa los campos {string}, {string} y {string}")
     public void elUsuarioCompletaLosCampos(String campo1, String campo2, String campo3, DataTable dataTable) {
         Logs.info("Colocando info en los campos");
+
         Map<String, String> data = dataTable.asMaps().get(0);
 
         WebElement nombreInput = driver.findElement(By.id("task_name"));
