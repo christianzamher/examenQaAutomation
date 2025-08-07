@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <!-- Patrón de formato: hora nivel logger - mensaje -->
+        <Property name="pattern">%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- Log Informativo -->
+        <File name="LogsInfo" fileName="src/test/resources/logs/informativeLogs.log" append="false">
+            <PatternLayout pattern="${pattern}" />
+        </File>
+
+        <!-- Log Debug -->
+        <File name="LogsDebug" fileName="src/test/resources/logs/debugLogs.log" append="false">
+            <PatternLayout pattern="${pattern}" />
+        </File>
+
+        <!-- Log Trace -->
+        <File name="LogsTrace" fileName="src/test/resources/logs/traceLogs.log" append="false">
+            <PatternLayout pattern="${pattern}" />
+        </File>
+
+        <!-- Consola opcional -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <!-- Logger por defecto -->
+        <Root level="trace">
+            <AppenderRef ref="LogsInfo" />
+            <AppenderRef ref="LogsDebug" />
+            <AppenderRef ref="LogsTrace" />
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>
